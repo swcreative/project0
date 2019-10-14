@@ -1,0 +1,47 @@
+* {
+  background: 1px solid red;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #142556;
+  color: white;
+
+}
+
+/* Typography *********************/
+h1 {
+  font-size: 3rem;
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.square {
+  font-size: 5rem;
+}
+
+
+
+/* Layout *************************/
+
+
+.container {
+  margin: auto;
+  margin-top: 1em;
+  margin: 0 100px;
+}
+
+.square  {
+  height: 140px;
+  width: 150px;
+  background-color: brown;
+  margin: 5px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  padding-top: 2rem;
+}
