@@ -3,6 +3,10 @@ console.log("Logic connected");
 let activeLetter = "X";
 
 const ticTac = {
+    activePos: "", // need to declare this variable to be used in multiple methods
+    testPos1: "",
+    testPos2: "",
+    testPos3: "",
     winning: {
       row1: [0, 1, 2],
       row2: [3, 4, 5],
@@ -14,139 +18,93 @@ const ticTac = {
       dia2: [2, 4, 6]
     },
     testingComb: {
-      1: ["row1", "col1", "dia1"],
-      2: ["row1", "col2"],
-      3: ["row1", "col3", "dia2"],
-      4: ["row2", "col1"],
-      5: ["row2", "col2", "dia1", "dia2"],
-      6: ["row2", "col3"],
-      7: ["row3", "col1", "dia2"],
-      8: ["row3", "col2"],
-      9: ["row3", "col3", "dia1"]
+      0: ["row1", "col1", "dia1"],
+      1: ["row1", "col2"],
+      2: ["row1", "col3", "dia2"],
+      3: ["row2", "col1"],
+      4: ["row2", "col2", "dia1", "dia2"],
+      5: ["row2", "col3"],
+      6: ["row3", "col1", "dia2"],
+      7: ["row3", "col2"],
+      8: ["row3", "col3", "dia1"]
     },
     moves: [],
 
     position: function( turn ) {
         // assign first digit to activeLetter
-        const activeLetter = turn.slice(0,1);
+        activeLetter = turn.slice(0,1);
         // assign second digit to activePos
-        const activePos = turn.slice(1,2);
+        activePos = turn.slice(1,2);
 
         //testing output
-        // console.log( activeLetter);
+        console.log( activeLetter);
         console.log( activePos );
 
         // input the activeLetter into the 'moves' array at position 'activePos'
         this.moves[activePos] = activeLetter;
 
         // testing output
-        // console.log( this.moves );
+        console.log( this.moves );
 
         // test the array against the winning combinations
         this.winningCalc();
     },
     winningCalc: function (){
-          // console.log( this.testingComb[activePos]);
-          // console.log( "line49: ", activeLetter);
 
-        // for ( let key in this.winning ) {
-        //   for (let key in this.winning.)
-        //   console.log( this.winning[key] );
+        // convert the activeNumber from a string to number to use in object lookup
+        const activeNumber = Number(activePos);
 
+        // determine the test group required
+        const tests = this.testingComb[activeNumber];
+
+        // loop through each relevant test
+        for ( let key in tests ) {
+
+            // testing output: showing the test name required eg 'row1'
+            console.log( tests[key]);
+
+            // create a varaible for each test value, eg 'row1'
+            const test = tests[key];
+
+            // use varaible 'test' to look up positions to test for activeLetter
+            // below are the three positions to test
+            testPos1 = this.winning[test][0];
+            testPos2 = this.winning[test][1];
+            testPos3 = this.winning[test][2];
+
+            console.log( testPos1);
+            console.log( testPos2);
+            console.log( testPos3);
+
+            console.log( this.moves[testPos1]);
+            console.log( this.moves[testPos2]);
+            console.log( this.moves[testPos3]);
+
+            console.log( activeLetter);
+
+            // do your three position test for winner
+            if ( (this.moves[testPos1] === activeLetter) &&
+                 (this.moves[testPos2] === activeLetter) &&
+                 (this.moves[testPos3] === activeLetter) ) {
+              console.log(`${ activeLetter } won this round`);
+              alert(`${ activeLetter } won this round`);
+
+              status = "win";
+              winner = activeLetter;
+              return;
+            } // end of if statement
+
+        } // end of for statement
+        // take turns with the active letter
     }
-          // const box = "box" + activePos;
-
-          // ticTac.moves.box = 4;
-          // ticTac.moves.boxactivePos) = activeLetter;
-          // const activePos = pos;
-          // ticTac.moves.letter = pos;
-          // // ticTac.moves = { letter, pos };
-          // console.log( activeLetter );
-          // console.log( pos );
-          // console.log( this.moves );
-
-
 }
 
-const testData = [ "X3", "O2", "X6", "O1", "X8", "O0", "X4" ]
+// const testData1 = [ "X0", "Y1", "X3", "Y2", "X6" ]
+// const testData = [ "X3", "O2", "X6", "O1", "X8", "O0", "X4" ]
+// const testData2 = [ "O0", "O1", "O2" ]
 
 
 
-for (let keys in testData) {
-  // console.log( testData[keys] + " and " + testData );
-  console.log( ticTac.position( testData[keys]) );
-  console.log( ticTac.moves);
-}
-
-
-// $('.square').on('click', function() {
-//   console.log("I got clicked");
-//   // console.log( $(this).attr('id') );
-//   const activeSquare = $(this).attr('id');
-//
-//   // If a square is not empty
-//   if ( $(this).text() === "" ){ // determine if square is empty
-//     // if square is not empty, place the activeLetter in the square
-//     $(this).text(activeLetter);
-//     // now need to switch the activeLetter
-//     if (activeLetter === "X") {
-//       activeLetter = "O";
-//     } else {
-//       activeLetter = "X";
-//     }
-//   } else {
-//     event.preventDefault();
-//   }
-//
-//   // for ( let key in grid) {
-//     // console.log("activesquare: ", activeSquare);
-//     // console.log( grid.row1.includes(activeSquare) );
-//     if (grid.row1.includes( activeSquare ) ) {
-//       // console.log("test row 1");
-//       // console.log( "this", $(this).attr('id') );
-//       // console.log( "grid.row1",grid.row1[0]);
-//       // if ( (grid.row1[0] === activeSquare) && (grid.row1[1] === activeSquare) && (grid.row[2] === activeSquare) ) {
-//       //   console.log("winner");
-//       // }
-//       if ( (grid.row1[0] === activeSquare) && (grid.row1[1] === activeSquare) ){
-//         console.log("winner");
-//       }
-//       if ( (grid.row1[1] === activeSquare) && (grid.row1[0] === activeSquare ) ){
-//         console.log("wintwo");
-//       }
-//     }
-//     if (grid.row2.includes( activeSquare ) ) {
-//       console.log("test row 2");
-//     }
-//     if (grid.row3.includes( activeSquare ) ) {
-//       console.log("test row 3");
-//     }
-//     if (grid.col1.includes( activeSquare ) ) {
-//       console.log("test col 1");
-//     }
-//     if (grid.col2.includes( activeSquare ) ) {
-//       console.log("test col 2");
-//     }
-//     if (grid.col3.includes( activeSquare ) ) {
-//       console.log("test col 3");
-//     }
-//     if (grid.dia1.includes( activeSquare ) ) {
-//       console.log("test dia 1");
-//     }
-//     if (grid.dia2.includes( activeSquare ) ) {
-//       console.log("test dia 2");
-//     }
-//
-//     // console.log(grid[key]);
-//     // console.log( grid[key].includes(activeSquare) );
-//     // if ( grid[key].includes( activeSquare ) === true ){
-//     //   console.log("yippee");
-//     // }
-//     // if activeSquare = grid
-//     // console.log(grid[key]);
-//     // console.log(grid);
-//   // }
-//
-//   // console.log($squareActive);
-//   // const newSquareContent = $squareActive.text("X")
-// }) // end of 'on.('click')' function
+// for (let keys in testData ) {
+//   console.log( ticTac.position( testData[keys] ) );
+// }
