@@ -45,3 +45,9 @@ h1 {
   text-align: center;
   padding-top: 2rem;
 }
+
+div#winStatement {
+  line-height: 4rem;
+  /* width: 30px; */
+  background-color: red;
+}

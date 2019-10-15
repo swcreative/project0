@@ -1,16 +1,15 @@
 console.log("JS UI connected");
 
+
+
 $(document).ready( function () {
-    // set the first letter to use as an 'X'
-    let activeLetter = "X";
 
-    let status = "active";
-
-    let winner = "";
-
-if ( status === "active" ) {
     // when someone clicks a square
     $('.square').on('click', function() {
+      if ( status === "win") {
+        return;
+      } // else do the below
+
       console.log("I got clicked");
       // console.log( $(this).attr('id') );
       const activeSquare = $(this).attr('id');
@@ -26,10 +25,14 @@ if ( status === "active" ) {
       }
 
       // run logic functions
-      // console.log( );
+      // yourTurn is the letter and square array position of your go
       const yourTurn = activeLetter + activeSquare;
-      // console.log( yourTurn );
-      ticTac.position ( yourTurn )
+      // process yourTurn in the logic functions
+      ticTac.position ( yourTurn );
+
+      if ( status === "win") {
+        $('#winStatement').text(`${ activeLetter } won this round`);
+      }
 
       // now need to switch the activeLetter
       if (activeLetter === "X") {
@@ -39,12 +42,22 @@ if ( status === "active" ) {
         activeLetter = "X";
       }
     }) // end of 'on.('click')' function
-  }
-  if ( status === "win" ) {
-      $('.square').on('click', function() {
-        alert(`Game over ${ winner } won.`)
-      })
-    } // end of IF statement
 
+    // need to reset the game ///////////
+    $('#reset').on('click', function() {
+      $('#0').text("");
+      $('#1').text("");
+      $('#2').text("");
+      $('#3').text("");
+      $('#4').text("");
+      $('#5').text("");
+      $('#6').text("");
+      $('#7').text("");
+      $('#8').text("");
+      $('#winStatement').text("");
+      activeLetter = "X";
+      status = "active";
+      ticTac.moves.length = 0;
 
+    })
 })

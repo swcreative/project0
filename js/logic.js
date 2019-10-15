@@ -2,11 +2,14 @@ console.log("Logic connected");
 
 let activeLetter = "X";
 
+let status = "active";
+
 const ticTac = {
     activePos: "", // need to declare this variable to be used in multiple methods
     testPos1: "",
     testPos2: "",
     testPos3: "",
+    winner: "",
     winning: {
       row1: [0, 1, 2],
       row2: [3, 4, 5],
@@ -86,11 +89,11 @@ const ticTac = {
             if ( (this.moves[testPos1] === activeLetter) &&
                  (this.moves[testPos2] === activeLetter) &&
                  (this.moves[testPos3] === activeLetter) ) {
-              console.log(`${ activeLetter } won this round`);
-              alert(`${ activeLetter } won this round`);
 
               status = "win";
               winner = activeLetter;
+              // console.log(`${ activeLetter } won this round`);
+
               return;
             } // end of if statement
 
