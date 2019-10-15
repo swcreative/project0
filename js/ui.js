@@ -30,28 +30,41 @@ $(document).ready( function () {
       // process yourTurn in the logic functions
       ticTac.position ( yourTurn );
 
+      // WIN /////////////
       if ( status === "win") {
-        $('#winStatement').text(`${ activeLetter } won this round`);
+        // announce who won the round
+        $('#player').text(`${ activeLetter } won this round`);
+        // update the score table
+        $('#scoreX').text(`X: ${ counterX }`);
+        $('#scoreO').text(`O: ${ counterO }`);
+        // reset the board
         $('#reset').css('visibility', 'visible');
       }
 
+      // DRAW /////////////
       if (status === "draw") {
-        $('#winStatement').text(`Nobody won this round`);
+        // announce no winner
+        $('#player').text(`Nobody won this round`);
+        // reset the board
         $('#reset').css('visibility', 'visible');
       }
-      // now need to switch the activeLetter
+
+      // if game is continuing, now need to switch the active player
       if (activeLetter === "X") {
         // console.log("change letter");
         activeLetter = "O";
       } else {
         activeLetter = "X";
       }
+
+      // Unless there is a winner, announce who the next player is
+       if (status === "active") {
       $('#player').text(`Your turn player ${ activeLetter }`)
+      }
+
     }) // end of 'on.('click')' function
 
-
-
-    // need to reset the game ///////////
+    // reset the game button ///////////
     $('#reset').on('click', function() {
       $('#0').text("");
       $('#1').text("");
@@ -67,7 +80,7 @@ $(document).ready( function () {
       status = "active";
       ticTac.moves = ["","","","","","","","",""];
       $('#reset').css('visibility', 'hidden');
-      $('#player').text(`'X'  goes first. Good luck.`)
+      $('#player').text(`'X' goes first. Good luck.`)
 
     }) // end of reset
 

@@ -89,3 +89,11 @@ div#winStatement {
   font-size: 1.4rem;
   padding: 0.8em 0;
 }
+
+.scorebutton {
+  padding: 0 20px;
+  margin: 0 20px;
+  border-radius: 6px;
+  color: var(--square-color);
+  font-weight: bold;
+}

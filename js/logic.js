@@ -4,6 +4,10 @@ let activeLetter = "X";
 
 let status = "active";
 
+let counterX = 0;
+
+let counterO = 0;
+
 const ticTac = {
     activePos: "", // need to declare this variable to be used in multiple methods
     testPos1: "",
@@ -39,15 +43,6 @@ const ticTac = {
         } else {
             console.log("Keep going");
       }
-      // for (let key in ticTac.moves ) {
-      //   const countTurns = 0;
-      //   if (typeof ticTac.moves[key] == string ){
-      //     countTurns += 1;
-      //     console.log("Nobody won");
-      //   } else {
-      //     console.log("Keep going");
-      //   }
-      //   }
     },
     position: function( turn ) {
         // assign first digit to activeLetter
@@ -100,6 +95,8 @@ const ticTac = {
             // console.log( this.moves[testPos3]);
             //
             // console.log( activeLetter);
+
+            // test if all squares have a value in them. If so, declare no winner and run reset function.
             this.noWinnerTest();
             // do your three position test for winner
             if ( (this.moves[testPos1] === activeLetter) &&
@@ -108,6 +105,14 @@ const ticTac = {
 
               status = "win";
               winner = activeLetter;
+
+
+              if ( winner === "X" ) {
+                counterX += 1;
+              }
+              if ( winner === "O" ) {
+                counterO += 1;
+              }
 
               return;
             } // end of if statement
