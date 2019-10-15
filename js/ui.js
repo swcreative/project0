@@ -12,6 +12,7 @@ $(document).ready( function () {
         return;
       } // else do the below
 
+
       console.log("I got clicked");
       // console.log( $(this).attr('id') );
       const activeSquare = $(this).attr('id');
@@ -24,6 +25,7 @@ $(document).ready( function () {
         console.log( activeLetter );
       } else {
         event.preventDefault();
+        return; // need to not allow click anywhere else
       }
 
       // run logic functions
@@ -34,11 +36,13 @@ $(document).ready( function () {
 
       // WIN /////////////
       if ( status === "win") {
+
+        $('#player').addClass('winannounce');
         // announce who won the round
         $('#player').text(`${ activeLetter } won this round`);
         // update the score table
-        $('#scoreX').text(`X: ${ counterX }`);
-        $('#scoreO').text(`O: ${ counterO }`);
+        $('#scoreX').text(`${ counterX }`);
+        $('#scoreO').text(`${ counterO }`);
         // reset the board
         $('#reset').css('visibility', 'visible');
       }
@@ -78,6 +82,8 @@ $(document).ready( function () {
       $('#7').text("");
       $('#8').text("");
       $('#winStatement').text("");
+
+      $('#player').removeClass('winannounce');
       // activeLetter = startPlayer;
       status = "active";
       ticTac.moves = ["","","","","","","","",""];

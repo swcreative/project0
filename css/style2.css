@@ -12,8 +12,10 @@
 
 :root {
   --main-color: #003367;
-  --square-color: #0080ff; /* #0059b3 */
+  --square-color: #003367; /* #0080ff #0059b3 */
   --highlighted-color: #0073e6; /* #004c9a */
+  --square-border: #000; /* #feff02 */
+  --win: #ff3333;
 }
 
 /* Typography *********************/
@@ -25,8 +27,25 @@ body {
 
 h1 {
   font-size: 4rem;
-  padding: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
   margin: 0 auto;
+  text-align: center;
+}
+
+.symbol {
+  font-size: 3rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+}
+
+#player {
+  font-size: 1.6rem;
+  padding: 1em;
   text-align: center;
 }
 
@@ -35,20 +54,22 @@ h1 {
   padding: 0.5em;
 }
 
-p {
-  font-size: 1.5rem;
-  padding: 0.8rem;
+.winannounce {
+  color: var(--win);
+  font-weight: bold;
 }
-
-
 
 /* Layout *************************/
 
 .container {
-  /* max-width: 90%; */
   max-width: 600px;
   margin: 0 auto;
-  border: 2px solid red;
+}
+
+#scoreheading {
+  text-align: center;
+  padding: 0;
+
 }
 
 .tic {
@@ -57,7 +78,6 @@ p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border: 1px solid green;
 }
 
 .row1 {
@@ -67,7 +87,6 @@ p {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  border: 1px solid brown;
 }
 
 .row2 {
@@ -88,7 +107,6 @@ p {
   flex-direction: row;
 }
 
-
 .square  {
   flex: 0 1 auto;
   width: 7rem;
@@ -98,17 +116,64 @@ p {
   justify-content: center;
   align-items: center;
   background-color: var(--square-color);
-  margin: 0.1em;
-  /* text-align: center; */
+  /* margin: 0.2em; */
+}
+
+.sq0 {
+  border-bottom: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+}
+
+.sq1 {
+  border-bottom: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq2 {
+  border-bottom: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq3 {
+  border-bottom: 8px solid var(--square-border);
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+}
+
+.sq4 {
+  border-bottom: 8px solid var(--square-border);
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq5 {
+  border-bottom: 8px solid var(--square-border);
+  border-top: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq6 {
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+}
+
+.sq7 {
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq8 {
+  border-top: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
 }
 
 .square:hover {
   background-color: var(--highlighted-color);
+  border: 4px inset #0080ff;
   box-shadow: 0px 0px 8px 4px rgba(220, 220, 200, 0.8);
-}
-
-.square:active {
-  box-shadow: 0px 0px 4px 2px rgba(220, 220, 200, 0.8);  /* transform: translateY(4px); */
 }
 
 div#winStatement {
@@ -119,12 +184,12 @@ div#winStatement {
 }
 
 .scorebutton {
+  font-size: 2.8rem;
   padding: 0.2em 0.5em;
   margin: 0 20px;
   border-radius: 6px;
   color: var(--square-color);
   font-weight: bold;
-  /* border: 4px solid var(--square-color); */
   }
 
   #reset {
@@ -132,13 +197,12 @@ div#winStatement {
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #e60039;
+    background: var(--win);
     padding: 20px;
     border-radius: 5px;
-    display: inline-block;
+    display: block;
     border: none;
-    margin-left: 5px;
-    margin-top: 10px;
+    margin: 30px auto;
   }
 
   @media only screen and (max-width: 800px) {
@@ -146,7 +210,7 @@ div#winStatement {
       max-width: 95%;
     }
     .square {
-      width: 22%;
-      height: 38%;
+      /* width: 22%;
+      height: 38%; */
     }
   }
