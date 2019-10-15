@@ -12,8 +12,8 @@
 
 :root {
   --main-color: #003367;
-  --square-color: #0059b3;
-  --highlighted-color: #004c9a;
+  --square-color: #0080ff; /* #0059b3 */
+  --highlighted-color: #0073e6; /* #004c9a */
 }
 
 /* Typography *********************/
@@ -22,12 +22,6 @@ body {
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
-
-div.tic {
-
-  /* background-color: green; */
-}
-
 
 h1 {
   font-size: 4rem;
@@ -45,26 +39,16 @@ p {
   padding: 0.8rem;
 }
 
-#reset {
-  visibility: hidden;
-  color: #fff !important;
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #e60039;
-  padding: 20px;
-  border-radius: 5px;
-  display: inline-block;
-  border: none;
-  margin-left: 20px;
-  margin-top: 10px;
-}
+
 
 /* Layout *************************/
 
 .container {
   width: 520px;
-  margin: 20px;
-  margin: 0 auto;
+  /* margin: 20px; */
+  margin: 30px auto
+  /* padding: 3em; */
+  /* border: 2px solid black; */
 }
 
 .square  {
@@ -80,7 +64,11 @@ p {
 
 .square:hover {
   background-color: var(--highlighted-color);
-  box-shadow: 0px 0px 18px 4px rgba(220, 220, 200, 0.8);
+  box-shadow: 0px 0px 8px 4px rgba(220, 220, 200, 0.8);
+}
+
+.square:active {
+  box-shadow: 0px 0px 4px 2px rgba(220, 220, 200, 0.8);  /* transform: translateY(4px); */
 }
 
 div#winStatement {
@@ -91,9 +79,24 @@ div#winStatement {
 }
 
 .scorebutton {
-  padding: 0 20px;
+  padding: 0.2em 0.5em;
   margin: 0 20px;
   border-radius: 6px;
   color: var(--square-color);
   font-weight: bold;
-}
+  /* border: 4px solid var(--square-color); */
+  }
+
+  #reset {
+    visibility: hidden;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #e60039;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
