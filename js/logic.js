@@ -76,7 +76,7 @@ const ticTac = {
         // loop through each relevant test
         for ( let key in tests ) {
 
-            // testing output: showing the test name required eg 'row1'
+            // testing output: showing the test name required eg 'row1' ////
             console.log( tests[key]);
 
             // create a varaible for each test value, eg 'row1'
@@ -88,6 +88,7 @@ const ticTac = {
             testPos2 = this.winning[test][1];
             testPos3 = this.winning[test][2];
 
+            // testing output /////
             // console.log( testPos1);
             // console.log( testPos2);
             // console.log( testPos3);
