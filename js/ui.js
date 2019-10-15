@@ -4,6 +4,8 @@ console.log("JS UI connected");
 
 $(document).ready( function () {
 
+    $('#player').text(`${ startPlayer} goes first. Good luck.`)
+
     // when someone clicks a square
     $('.square').on('click', function() {
       if ( status === "win") {
@@ -76,11 +78,17 @@ $(document).ready( function () {
       $('#7').text("");
       $('#8').text("");
       $('#winStatement').text("");
-      activeLetter = "X";
+      // activeLetter = startPlayer;
       status = "active";
       ticTac.moves = ["","","","","","","","",""];
       $('#reset').css('visibility', 'hidden');
-      $('#player').text(`'X' goes first. Good luck.`)
+      if (startPlayer === "X") {
+        startPlayer = "O";
+      } else {
+        startPlayer = "X";
+      }
+      activeLetter = startPlayer;
+      $('#player').text(`'${ startPlayer }' goes first. Good luck.`)
 
     }) // end of reset
 

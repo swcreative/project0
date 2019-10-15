@@ -1,6 +1,8 @@
 console.log("Logic connected");
 
-let activeLetter = "X";
+let startPlayer = "X";
+
+let activeLetter = startPlayer;
 
 let status = "active";
 
@@ -113,12 +115,10 @@ const ticTac = {
               if ( winner === "O" ) {
                 counterO += 1;
               }
-
               return;
             } // end of if statement
 
         } // end of for statement
-
     }
 } // end of object ticTac
 
