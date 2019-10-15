@@ -32,7 +32,22 @@ const ticTac = {
       8: ["row3", "col3", "dia1"]
     },
     moves: [],
-
+    noWinnerTest: function() {
+      if (ticTac.moves.includes(undefined) === false) {
+          console.log("Nobody won");
+        } else {
+            console.log("Keep going");
+      }
+      // for (let key in ticTac.moves ) {
+      //   const countTurns = 0;
+      //   if (typeof ticTac.moves[key] == string ){
+      //     countTurns += 1;
+      //     console.log("Nobody won");
+      //   } else {
+      //     console.log("Keep going");
+      //   }
+      //   }
+    },
     position: function( turn ) {
         // assign first digit to activeLetter
         activeLetter = turn.slice(0,1);
@@ -75,16 +90,16 @@ const ticTac = {
             testPos2 = this.winning[test][1];
             testPos3 = this.winning[test][2];
 
-            console.log( testPos1);
-            console.log( testPos2);
-            console.log( testPos3);
-
-            console.log( this.moves[testPos1]);
-            console.log( this.moves[testPos2]);
-            console.log( this.moves[testPos3]);
-
-            console.log( activeLetter);
-
+            // console.log( testPos1);
+            // console.log( testPos2);
+            // console.log( testPos3);
+            //
+            // console.log( this.moves[testPos1]);
+            // console.log( this.moves[testPos2]);
+            // console.log( this.moves[testPos3]);
+            //
+            // console.log( activeLetter);
+            this.noWinnerTest();
             // do your three position test for winner
             if ( (this.moves[testPos1] === activeLetter) &&
                  (this.moves[testPos2] === activeLetter) &&
@@ -92,15 +107,14 @@ const ticTac = {
 
               status = "win";
               winner = activeLetter;
-              // console.log(`${ activeLetter } won this round`);
 
               return;
             } // end of if statement
 
         } // end of for statement
-        // take turns with the active letter
+
     }
-}
+} // end of object ticTac
 
 // const testData1 = [ "X0", "Y1", "X3", "Y2", "X6" ]
 // const testData = [ "X3", "O2", "X6", "O1", "X8", "O0", "X4" ]

@@ -1,44 +1,76 @@
-* {
-  background: 1px solid red;
-}
+/* Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 
-body {
-  background: #142556;
-  color: white;
 
+
+/* colours ************************/
+
+:root {
+  --main-color: #003367;
+  --square-color: #0059b3;
+  --highlighted-color: #004c9a;
 }
 
 /* Typography *********************/
+body {
+  background: var(--main-color);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+div.tic {
+
+  /* background-color: green; */
+}
+
+
 h1 {
-  font-size: 3rem;
-  padding: 1em;
+  font-size: 4rem;
+  padding: 0.5em;
   margin: 0 auto;
+  text-align: center;
 }
 
 .square {
   font-size: 5rem;
 }
 
+p {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+}
 
+#reset {
+  visibility: hidden;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #e60039;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  margin-left: 20px;
+  margin-top: 10px;
+}
 
 /* Layout *************************/
 
-
 .container {
-  margin: auto;
-  margin-top: 1em;
-  margin: 0 100px;
+  width: 520px;
+  margin: 20px;
+  margin: 0 auto;
 }
 
 .square  {
   height: 140px;
   width: 150px;
-  background-color: brown;
+  background-color: var(--square-color);
   margin: 5px;
   display: inline-block;
   vertical-align: top;
@@ -46,8 +78,14 @@ h1 {
   padding-top: 2rem;
 }
 
+.square:hover {
+  background-color: var(--highlighted-color);
+  box-shadow: 0px 0px 18px 4px rgba(220, 220, 200, 0.8);
+}
+
 div#winStatement {
-  line-height: 4rem;
-  /* width: 30px; */
-  background-color: red;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 0.8em 0;
 }

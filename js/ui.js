@@ -32,6 +32,8 @@ $(document).ready( function () {
 
       if ( status === "win") {
         $('#winStatement').text(`${ activeLetter } won this round`);
+        $('#reset').css('visibility', 'visible');
+
       }
 
       // now need to switch the activeLetter
@@ -58,6 +60,7 @@ $(document).ready( function () {
       activeLetter = "X";
       status = "active";
       ticTac.moves.length = 0;
+      $('#reset').css('visibility', 'hidden');
 
     })
 })
