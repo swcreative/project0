@@ -31,10 +31,11 @@ const ticTac = {
       7: ["row3", "col2"],
       8: ["row3", "col3", "dia1"]
     },
-    moves: [],
+    moves: [ "","" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ], // setting an empty array. I need to start the array with a length so that I can check each go if array has any undefined elements. If so, then continue playing.
     noWinnerTest: function() {
-      if (ticTac.moves.includes(undefined) === false) {
+      if (ticTac.moves.includes("") === false) {
           console.log("Nobody won");
+          status = "draw";
         } else {
             console.log("Keep going");
       }

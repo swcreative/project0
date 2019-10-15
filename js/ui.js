@@ -33,9 +33,12 @@ $(document).ready( function () {
       if ( status === "win") {
         $('#winStatement').text(`${ activeLetter } won this round`);
         $('#reset').css('visibility', 'visible');
-
       }
 
+      if (status === "draw") {
+        $('#winStatement').text(`Nobody won this round`);
+        $('#reset').css('visibility', 'visible');
+      }
       // now need to switch the activeLetter
       if (activeLetter === "X") {
         // console.log("change letter");
@@ -43,7 +46,10 @@ $(document).ready( function () {
       } else {
         activeLetter = "X";
       }
+      $('#player').text(`Your turn player ${ activeLetter }`)
     }) // end of 'on.('click')' function
+
+
 
     // need to reset the game ///////////
     $('#reset').on('click', function() {
@@ -59,8 +65,10 @@ $(document).ready( function () {
       $('#winStatement').text("");
       activeLetter = "X";
       status = "active";
-      ticTac.moves.length = 0;
+      ticTac.moves = ["","","","","","","","",""];
       $('#reset').css('visibility', 'hidden');
+      $('#player').text(`'X'  goes first. Good luck.`)
 
-    })
+    }) // end of reset
+
 })
