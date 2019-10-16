@@ -107,8 +107,8 @@ p {
 
 .square  {
   flex: 0 1 auto;
-  width: 7rem;
-  height: 7rem;
+  width: 6.5rem;
+  height: 6.5rem;
   align-items: center;
   display: flex;
   justify-content: center;
