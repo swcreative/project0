@@ -226,12 +226,13 @@ div#winStatement {
   }
 }
 
-@media (orientation: landscape) {
-  body {
-    max-width: 200px;
-    }
+ @media only screen
+  and (min-device-width: 300px)
+  and (max-device-width: 800px)
+  and (orientation: landscape) {
+
     .container {
-    max-width: 200px;
+     max-width: 200px;
     background-color: green;
     }
 }
