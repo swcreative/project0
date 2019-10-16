@@ -226,8 +226,9 @@ div#winStatement {
   }
 }
 
-@media (orientation=landscape) {
+@media (orientation: landscape) {
   .container {
-    max-width: 60%;
+    max-width: 200px;
+    background-color: green;
   }
 }
