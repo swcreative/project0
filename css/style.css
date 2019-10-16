@@ -12,8 +12,10 @@
 
 :root {
   --main-color: #003367;
-  --square-color: #0080ff; /* #0059b3 */
+  --square-color: #003367; /* #0080ff #0059b3 */
   --highlighted-color: #0073e6; /* #004c9a */
+  --square-border: #000; /* #feff02 */
+  --win: #ff3333;
 }
 
 /* Typography *********************/
@@ -24,14 +26,16 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
-  padding: 0.5em;
+  font-size: 4.3rem;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
   margin: 0 auto;
   text-align: center;
 }
 
-.square {
-  font-size: 5rem;
+.symbol {
+  font-size: 3rem;
+  text-align: center;
 }
 
 p {
@@ -39,36 +43,137 @@ p {
   padding: 0.8rem;
 }
 
+#player {
+  font-size: 1.6rem;
+  padding: 1em;
+  text-align: center;
+}
 
+.square {
+  font-size: 7rem;
+  padding: 0.5em;
+}
+
+.winannounce {
+  color: var(--win);
+  font-weight: bold;
+}
 
 /* Layout *************************/
 
 .container {
-  width: 520px;
-  /* margin: 20px; */
-  margin: 30px auto
-  /* padding: 3em; */
-  /* border: 2px solid black; */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#scoreheading {
+  text-align: center;
+  padding: 0;
+
+}
+
+.tic {
+  display: flex;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.row1 {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.row2 {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.row3 {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 .square  {
-  height: 140px;
-  width: 150px;
+  flex: 0 1 auto;
+  width: 7rem;
+  height: 7rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--square-color);
-  margin: 5px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  padding-top: 2rem;
+  /* margin: 0.2em; */
+}
+
+.sq0 {
+  border-bottom: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+}
+
+.sq1 {
+  border-bottom: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq2 {
+  border-bottom: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq3 {
+  border-bottom: 8px solid var(--square-border);
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+}
+
+.sq4 {
+  border-bottom: 8px solid var(--square-border);
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq5 {
+  border-bottom: 8px solid var(--square-border);
+  border-top: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq6 {
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+}
+
+.sq7 {
+  border-top: 8px solid var(--square-border);
+  border-right: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
+}
+
+.sq8 {
+  border-top: 8px solid var(--square-border);
+  border-left: 8px solid var(--square-border);
 }
 
 .square:hover {
   background-color: var(--highlighted-color);
+  border: 4px inset rgba(220, 220, 200, 0.8); /*#0080ff; */
   box-shadow: 0px 0px 8px 4px rgba(220, 220, 200, 0.8);
-}
-
-.square:active {
-  box-shadow: 0px 0px 4px 2px rgba(220, 220, 200, 0.8);  /* transform: translateY(4px); */
 }
 
 div#winStatement {
@@ -79,24 +184,30 @@ div#winStatement {
 }
 
 .scorebutton {
-  padding: 0.2em 0.5em;
-  margin: 0 20px;
+  font-size: 2.7rem;
+  padding: 0.1em 0.8em;
+  margin: 0 0.4em;
   border-radius: 6px;
   color: var(--square-color);
   font-weight: bold;
-  /* border: 4px solid var(--square-color); */
-  }
+}
 
-  #reset {
-    visibility: hidden;
-    color: #fff !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: #e60039;
-    padding: 20px;
-    border-radius: 5px;
-    display: inline-block;
-    border: none;
-    margin-left: 5px;
-    margin-top: 10px;
+#reset {
+  visibility: hidden;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--win);
+  padding: 20px;
+  border-radius: 5px;
+  display: block;
+  border: none;
+  margin: 30px auto;
+  font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    max-width: 95%;
   }
+}
