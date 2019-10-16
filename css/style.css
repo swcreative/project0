@@ -8,7 +8,7 @@
 /* colours ************************/
 
 :root {
-  --main-background-color: #003367;
+  --main-background-color: #0c0a32;
   --square-color: #1717a7; /* #0080ff #0059b3 */
   --highlighted-color: #0073e6; /* #004c9a */
   --square-border: #0080ff; /* #feff02 */
@@ -18,9 +18,9 @@
 
 /* Typography *********************/
 body {
-  /* background: var(--main-background-color); */
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,22,140,1) 84%, rgba(7,64,115,1) 100%);
+  background: var(--main-background-color);
+  /* background: rgb(2,0,36); */
+/* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(22,22,140,1) 84%, rgba(7,64,115,1) 100%); */
   color: var(--main-text);
   font-family: 'Open Sans', sans-serif;
 }
@@ -72,6 +72,7 @@ p {
   color: #555;
   border-radius: 0.4em;
   display: block;
+  background-color: #eee;
 }
 
 .howtobottom {
