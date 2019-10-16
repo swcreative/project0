@@ -37,9 +37,9 @@ $(document).ready( function () {
         $('#myModal').css('display', 'block'); // trigger the modal
         $('.modal-content p').text(`${ activeLetter } won this round`);
         confetti.start();
-        $('#player').addClass('winannounce');
-        // announce who won the round
-        $('#player').text(`${ activeLetter } won this round`);
+
+        $('#player').css('visibility', 'hidden');
+
         // update the score table
         $('#scoreX').text(`${ counterX }`);
         $('#scoreO').text(`${ counterO }`);
@@ -48,6 +48,8 @@ $(document).ready( function () {
       $('#myModal').on('click', function () {
           // if ( display = $('#myModal').css('display')) {
             $('#myModal').css('display', 'none')
+
+            // show reset button
             $('#reset').css('visibility', 'visible');
 
             // stop the confetti
