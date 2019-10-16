@@ -68,7 +68,7 @@ p {
 .howto {
   margin-top: 0.3em;
   font-size: 1.0rem;
-  padding: 0.2em;
+  padding: 0.5em;
   color: #555;
   border-radius: 0.4em;
   display: block;
@@ -76,10 +76,6 @@ p {
 
 .howtobottom {
   margin-bottom: 4rem;
-}
-
-.howto a {
-  text-decoration: none;
 }
 
 .howto a,
