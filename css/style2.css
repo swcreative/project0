@@ -190,27 +190,24 @@ div#winStatement {
   border-radius: 6px;
   color: var(--square-color);
   font-weight: bold;
-  }
+}
 
-  #reset {
-    visibility: hidden;
-    color: #fff !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: var(--win);
-    padding: 20px;
-    border-radius: 5px;
-    display: block;
-    border: none;
-    margin: 30px auto;
-  }
+#reset {
+  visibility: hidden;
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--win);
+  padding: 20px;
+  border-radius: 5px;
+  display: block;
+  border: none;
+  margin: 30px auto;
+  font-size: 2rem;
+}
 
-  @media only screen and (max-width: 800px) {
-    .container {
-      max-width: 95%;
-    }
-    .square {
-      /* width: 22%;
-      height: 38%; */
-    }
+@media only screen and (max-width: 800px) {
+  .container {
+    max-width: 95%;
   }
+}

@@ -1,7 +1,5 @@
 console.log("JS UI connected");
 
-
-
 $(document).ready( function () {
 
     $('#player').text(`${ startPlayer} goes first. Good luck.`)
@@ -36,7 +34,9 @@ $(document).ready( function () {
 
       // WIN /////////////
       if ( status === "win") {
-
+        $('#myModal').css('display', 'block'); // trigger the modal
+        $('.modal-content p').text(`${ activeLetter } won this round`);
+        confetti.start();
         $('#player').addClass('winannounce');
         // announce who won the round
         $('#player').text(`${ activeLetter } won this round`);
@@ -82,6 +82,8 @@ $(document).ready( function () {
       $('#7').text("");
       $('#8').text("");
       $('#winStatement').text("");
+
+      confetti.stop();
 
       $('#player').removeClass('winannounce');
       // activeLetter = startPlayer;
