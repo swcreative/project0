@@ -203,7 +203,7 @@ div#winStatement {
   display: block;
   border: none;
   margin: 30px auto;
-  font-size: 2rem;
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 800px) {
