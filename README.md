@@ -29,8 +29,10 @@ Click on the 'reset' and you are ready to go again.
 
  The modal css and javascript files have been kept in separate files to make it easy to include or exclude without risk of damaging other code.
 
+ The line in ui.js to include/exclude the modal is lines 37 & 38 to appear and lines 47 to 51 to hide.
+
  The JavaScript confetti code is kindly provided by github account [mathusummut.]( https://github.com/mathusummut/confetti.js)
-Copyright is recognised at the top of the confetti.js file.
+Copyright for this is recognised at the top of the confetti.js file.
 
  ## INSTALLATION INSTRUCTIONS
  To play the game, [click here.](https://swcreative.github.io/project0/)
@@ -42,3 +44,12 @@ Copyright is recognised at the top of the confetti.js file.
  The board does not count the number of draws.
  The board cannot be played offline.
  The board cannot be played online as multi-players.
+
+ ### LOGIC APPLIED
+ Each turn is kept in an array.
+ The different winning combinations are stored in an object.
+ Each winning combination that is relevant to each square is kept is a separate object.
+ When you take a turn, the logic determines if the letter (either X or O) applied to that square can also be found in the winning combination squares that relate to the played square. If so, then you are the winner.
+
+ ## MEDIUM ARTICLE
+If you made it this far, I also wrote a [Medium article](https://medium.com/@scottw2508/what-two-days-at-a-coding-bootcamp-feels-like-a3371441d5eb) on the process.

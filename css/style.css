@@ -11,17 +11,20 @@
 /* colours ************************/
 
 :root {
-  --main-color: #003367;
-  --square-color: #003367; /* #0080ff #0059b3 */
+  --main-background-color: #003367;
+  --square-color: #1717a7; /* #0080ff #0059b3 */
   --highlighted-color: #0073e6; /* #004c9a */
-  --square-border: #000; /* #feff02 */
+  --square-border: #0080ff; /* #feff02 */
   --win: #ff3333;
+  --main-text: #fff;
 }
 
 /* Typography *********************/
 body {
-  background: var(--main-color);
-  color: white;
+  /* background: var(--main-background-color); */
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(23,23,167,1) 71%, rgba(0,136,255,1) 100%);
+  color: var(--main-text);
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -196,12 +199,16 @@ div#winStatement {
   background-color: #fff !important;
 }
 
+.modal {
+  color: var(--main-background-color);
+}
+
 #reset {
   visibility: hidden;
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
-  background: var(--win);
+  background: #ff3333;
   padding: 20px;
   border-radius: 5px;
   display: block;
@@ -216,6 +223,11 @@ div#winStatement {
   }
   h1 {
     padding: 1.5rem;
+  }
+}
 
+@media (orientation=landscape) {
+  .container {
+    max-width: 60%;
   }
 }

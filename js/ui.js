@@ -43,9 +43,17 @@ $(document).ready( function () {
         // update the score table
         $('#scoreX').text(`${ counterX }`);
         $('#scoreO').text(`${ counterO }`);
-        // reset the board
-        $('#reset').css('visibility', 'visible');
       }
+      // after WIN, need to clear modal and activate reset
+      $('#myModal').on('click', function () {
+          // if ( display = $('#myModal').css('display')) {
+            $('#myModal').css('display', 'none')
+            $('#reset').css('visibility', 'visible');
+
+            // stop the confetti
+            confetti.stop();
+
+        })
 
       // DRAW /////////////
       if (status === "draw") {
@@ -83,7 +91,6 @@ $(document).ready( function () {
       $('#8').text("");
       $('#winStatement').text("");
 
-      confetti.stop();
 
       $('#player').removeClass('winannounce');
       // activeLetter = startPlayer;

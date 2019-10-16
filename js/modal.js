@@ -21,5 +21,6 @@ $(document).ready( function () {
         // if ( display = $('#myModal').css('display')) {
           console.log("Hello status modal");
           $('#myModal').css('display', 'none')
+          $('#reset').css('visibility', 'visible');
       })
 })
