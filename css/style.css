@@ -190,6 +190,7 @@ div#winStatement {
   border-radius: 6px;
   color: var(--square-color);
   font-weight: bold;
+  background-color: #fff;
 }
 
 #reset {
@@ -206,12 +207,12 @@ div#winStatement {
   font-size: 1.3rem;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .container {
     min-width: 95%;
-    background-color: red;
+    /* background-color: red; */
   }
   * {
-    font-size: 200%;
+    /* font-size: 200%; */
   }
 }
