@@ -230,9 +230,13 @@ div#winStatement {
   and (min-device-width: 300px)
   and (max-device-width: 800px)
   and (orientation: landscape) {
-
+    html {
+      font-size: 50%;
+    }
     .container {
-     max-width: 200px;
-    background-color: green;
+    margin: 0 auto;
+
+    /* padding: 20%; */
+    /* background-color: green; */
     }
 }
