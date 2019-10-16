@@ -6,19 +6,19 @@ This is a simple Tic Tac Toe game.
 ## THE WAY THIS WORKS
 The game starts with two players, player X and player O.
 
-player X starts. The players take turns until there is a winner or a draw.
+Player X starts. The players take turns until there is a winner or a draw.
 
 ### A DRAW
 If there is a draw, the reset button appears.
 
 ### A WINNER
-If there is a winner, a javascript confetti script loads (yahhhhh) and a modal pops up to announce the winner. Click on the 'x' and the modal announcement disappears.
+If there is a winner, a javascript confetti script loads (yahhhhh) and a modal pops up to announce the winner. Click on the 'x' of the modal and the modal announcement disappears.
 
 At that point the 'reset' button appears.
 
 Click on the 'reset' and you are ready to go again.
 
- The winning scores for each player is kept until you refresh your browser.
+ The number of wins each player are kept until you refresh your browser.
 
  ## TECHNOLOGIES USED
  A combination of HTML, CSS and JavaScript files were used.
@@ -38,6 +38,7 @@ Copyright is recognised at the top of the confetti.js file.
  Enjoy!
 
  ### UNSOLVED PROBLEMS...(or features to consider adding).
+ I could not get the modal button to disappear if you clicked anywhere on the screen.
  The board does not count the number of draws.
  The board cannot be played offline.
  The board cannot be played online as multi-players.
