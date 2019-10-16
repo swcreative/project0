@@ -50,7 +50,7 @@ p {
 }
 
 .square {
-  font-size: 7rem;
+  font-size: 9rem;
   padding: 0.5em;
 }
 
@@ -62,7 +62,7 @@ p {
 /* Layout *************************/
 
 .container {
-  max-width: 600px;
+  /* max-width: 600px; */
   margin: 0 auto;
 }
 
@@ -81,7 +81,7 @@ p {
 }
 
 .row1 {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   display: flex;
   justify-content: center;
   -webkit-flex-direction: row;
@@ -90,7 +90,7 @@ p {
 }
 
 .row2 {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   display: flex;
   justify-content: center;
   -webkit-flex-direction: row;
@@ -206,8 +206,12 @@ div#winStatement {
   font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .container {
-    max-width: 95%;
+    min-width: 95%;
+    background-color: red;
+  }
+  * {
+    font-size: 200%;
   }
 }
