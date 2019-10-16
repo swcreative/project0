@@ -234,9 +234,6 @@ div#winStatement {
       font-size: 50%;
     }
     .container {
-    margin: 0 auto;
-
-    /* padding: 20%; */
-    /* background-color: green; */
+      margin: 0 auto;
     }
 }
