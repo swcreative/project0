@@ -227,8 +227,11 @@ div#winStatement {
 }
 
 @media (orientation: landscape) {
-  .container {
+  body {
+    max-width: 200px;
+    }
+    .container {
     max-width: 200px;
     background-color: green;
-  }
+    }
 }
