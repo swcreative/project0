@@ -56,6 +56,9 @@ The different winning combinations are stored in an object.
 Each winning combination that is relevant to each square is kept is a separate object.
 When you take a turn, the logic determines if the letter (either X or O) applied to that square can also be found in the winning combination squares that relate to the played square. If so, then you are the winner.
 
+## SCREEN SHOT of GAME
+This [screen shot](https://github.com/swcreative/project0/blob/master/Tic%20Tac%20Screen%20Shot.png) shows the graphics of the game as at Oct 2019.
+
 ## MEDIUM ARTICLE
 If you made it this far, I also wrote a [Medium article](https://medium.com/@scottw2508/what-two-days-at-a-coding-bootcamp-feels-like-a3371441d5eb) on the process.
 
