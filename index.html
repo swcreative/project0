@@ -10,7 +10,7 @@
     <!-- style sheets -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
     <link rel="stylesheet" href="css/animate.css">
 
     <!-- scripts -->
@@ -24,42 +24,45 @@
   </head>
   <body>
     <div class="container">
+      <header>
 
-      <button class="howto"><a href="help.html">How to play</a></button>
-      <button class="howto" id="clear-button">Clear Scores</button>
+          <button class="howto"><a href="help.html">How to play</a></button>
+          <button class="howto" id="clear-button">Clear Scores</button>
 
-      <h1>Tic Tac Toe</h1>
+          <h1>Tic Tac Toe</h1>
 
-    <p id="scoreheading">Score count</p>
-    <p class="symbol">X:<button class="scorebutton" id="scoreX"></button>
-        O:<button class="scorebutton" id="scoreO"></button></p>
+          <p id="scoreheading">Score count</p>
+          <p class="symbol">X:<button class="scorebutton" id="scoreX"></button>
+            O:<button class="scorebutton" id="scoreO"></button></p>
 
-      <p id="player">'X' to go first. </p>
+          <p id="player">'X' to go first. </p>
+    </header>
+    <main>
+        <div class="tic">
+          <div class="row1">
+            <div class="square sq0" id=0></div>
+            <div class="square sq1" id=1></div>
+            <div class="square sq2" id=2></div>
+          </div>
 
-    <div class="tic">
-      <div class="row1">
-        <div class="square sq0" id=0></div>
-        <div class="square sq1" id=1></div>
-        <div class="square sq2" id=2></div>
-      </div>
+          <div class="row2">
+            <div class="square sq3" id=3></div>
+            <div class="square sq4" id=4></div>
+            <div class="square sq5" id=5></div>
+          </div>
 
-      <div class="row2">
-        <div class="square sq3" id=3></div>
-        <div class="square sq4" id=4></div>
-        <div class="square sq5" id=5></div>
-      </div>
+          <div class="row3">
+            <div class="square sq6" id=6></div>
+            <div class="square sq7" id=7></div>
+            <div class="square sq8" id=8></div>
+          </div>
+        </div>
+    </main>
+    <footer>
+        <button id="reset">Reset Board</button>
 
-      <div class="row3">
-        <div class="square sq6" id=6></div>
-        <div class="square sq7" id=7></div>
-        <div class="square sq8" id=8></div>
-      </div>
-    </div>
-
-      <button id="reset">Reset Board</button>
-
-    </div> <!-- div container -->
-
+        </div> <!-- div container -->
+    </footer>
     <!-- The Modal -->
     <div id="myModal" class="modal">
 
