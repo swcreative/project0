@@ -76,5 +76,5 @@ Is anything ever truly finished?
 >The programmer agreed to this.
 >
 >Several years later, the manager retired. On the way to his retirement luncheon, he discovered the programmer asleep at his terminal. He had been programming all night.
-
-`- Book 5, verse 2: The Tao of Programming`
+>
+> **- Book 5, verse 2: The Tao of Programming**
