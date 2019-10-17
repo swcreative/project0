@@ -270,8 +270,8 @@ div#winStatement {
     html {
       font-size: 40%;
     }
-    .help {
-      font-size: 70%;
+    .help p {
+      font-size: 80%;
     }
     .container {
       max-width: 60%;
