@@ -263,22 +263,22 @@ div#winStatement {
   font-size: 1.2rem;
 }
 
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .container {
     width: 95%;
   }
   h1 {
     padding: 1.5rem;
   }
-} */
+}
 
-/* @media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   html {
     font-size: 60%;
   }
   .container {
     padding: 1em;
-    /* flex-direction: row;
+    flex-direction: row;
   }
   .header {
     display: flex;
@@ -286,11 +286,11 @@ div#winStatement {
     font-size: 60%;
   }
 }
-*/
 
- @media screen
+
+/* @media and screen
   and (min-width: 300px)
-  and (max-width: 800px)
+  and (max-width: 1200px)
   and (orientation: landscape) {
     html {
       font-size: 65%;
@@ -301,6 +301,7 @@ div#winStatement {
     .container {
       flex-direction: row;
       padding: 1em;
+      color: green;
     }
     .header {
       display: flex;
@@ -315,7 +316,4 @@ div#winStatement {
     div.help > p {
       font-size: 180%;
     }
-    /* .container {
-      max-width: 60%;
-    } */
-}
+} */
