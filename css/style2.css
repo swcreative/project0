@@ -288,12 +288,15 @@ div#winStatement {
 }
 */
 
- @media only screen
+ @media screen
   and (min-width: 300px)
   and (max-width: 800px)
   and (orientation: landscape) {
     html {
       font-size: 65%;
+    }
+    body {
+      background-color: green;
     }
     .container {
       flex-direction: row;
