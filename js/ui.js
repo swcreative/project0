@@ -15,8 +15,10 @@ $(document).ready( function () {
     $('#clear-button').on('click', function() {
       localStorage.clear(); // this clears all - which includes X and O scores
       // update scores on page
-      $('#scoreX').text( 0 );
-      $('#scoreO').text(  0);
+      localStorage.setItem("X", 0);
+      localStorage.setItem("O", 0);
+      $('#scoreX').text( localStorage.getItem("X") || 0 );
+      $('#scoreO').text( localStorage.getItem("O") ||0 );
     });
 
     // when someone clicks a square
