@@ -270,7 +270,7 @@ div#winStatement {
     html {
       font-size: 40%;
     }
-    .help>p {
+    div.help > p {
       font-size: 180%;
     }
     .container {
