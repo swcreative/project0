@@ -268,7 +268,7 @@ div#winStatement {
   and (max-device-width: 800px)
   and (orientation: landscape) {
     html {
-      font-size: 50%;
+      font-size: 80%;
     }
     .container {
       margin: 0 auto;
