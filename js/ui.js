@@ -55,6 +55,7 @@ $(document).ready( function () {
             // stop the confetti
             confetti.stop();
 
+
         })
 
       // DRAW /////////////
@@ -93,6 +94,8 @@ $(document).ready( function () {
       $('#8').text("");
       $('#winStatement').text("");
 
+      // flips the squares on reset
+      $('.square').addClass('rotate-center');
 
       $('#player').removeClass('winannounce');
       // activeLetter = startPlayer;

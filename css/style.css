@@ -9,7 +9,7 @@
 
 :root {
   --main-background-color: #0c0a32;
-  --square-color: #1717a7; /* #0080ff #0059b3 */
+  --square-color: #0c0a32; /* #1717a7 #0080ff #0059b3 */
   --highlighted-color: #0073e6; /* #004c9a */
   --square-border: #0080ff; /* #feff02 */
   --win: #ff3333;

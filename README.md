@@ -9,7 +9,7 @@ The game starts with two players, player X and player O.
 Player X starts. The players take turns until there is a winner or a draw.
 
 ### A DRAW
-If there is a draw, the reset button appears.
+If there is a draw, the reset button appears without any celebrations.
 
 ### A WINNER
 If there is a winner, a javascript confetti script loads (yahhhhh) and a modal pops up to announce the winner. Click on the 'x' of the modal and the modal announcement disappears.
@@ -40,10 +40,9 @@ Copyright for this is recognised at the top of the confetti.js file.
  Enjoy!
 
  ### UNSOLVED PROBLEMS...(or features to consider adding).
- I could not get the modal button to disappear if you clicked anywhere on the screen.
  The board does not count the number of draws.
- The board cannot be played offline.
  The board cannot be played online as multi-players.
+ I think the logic would have worked better if I gave co-ordinates to each square, instead of fixed positions.
 
  ### LOGIC APPLIED
  Each turn is kept in an array.
