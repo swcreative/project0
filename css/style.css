@@ -270,7 +270,7 @@ div#winStatement {
     html {
       font-size: 40%;
     }
-    .howto .howtobottom {
+    .howto.howtobottom {
       font-size: 200%;
     }
     div.help > p {
