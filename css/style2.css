@@ -272,19 +272,21 @@ div#winStatement {
   }
 } */
 
-@media screen and (max-height: 700px) {
-  html {
-    font-size: 60%;
-  }
-  .container {
-    padding: 1em;
-    flex-direction: row;
-  }
-  .header {
-    display: flex;
-    justify-content: center;
-    font-size: 60%;
-  }
+@media screen
+  and (max-height: 700px)
+  and (orientation: landscape) {
+      html {
+        font-size: 60%;
+      }
+      .container {
+        padding: 1em;
+        flex-direction: row;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        font-size: 60%;
+      }
 }
 
 
