@@ -292,7 +292,7 @@ div#winStatement {
   and (max-device-width: 800px)
   and (orientation: landscape) {
     html {
-      font-size: 60%;
+      font-size: 65%;
     }
     .container {
       flex-direction: row;
