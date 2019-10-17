@@ -278,7 +278,7 @@ div#winStatement {
   }
   .container {
     padding: 1em;
-    /* flex-direction: row; 
+    /* flex-direction: row;
   }
   .header {
     display: flex;
@@ -289,8 +289,8 @@ div#winStatement {
 */
 
  @media only screen
-  and (min-device-width: 300px)
-  and (max-device-width: 800px)
+  and (min-width: 300px)
+  and (max-width: 800px)
   and (orientation: landscape) {
     html {
       font-size: 65%;
