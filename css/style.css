@@ -26,8 +26,8 @@ body {
 }
 
 h1 {
-  font-size: 4.3rem;
-  padding: 0.7em 0;
+  font-size: 4.1rem;
+  padding: 0.2em 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -39,12 +39,12 @@ h1 {
 
 p {
   font-size: 1.5rem;
-  padding: 0.8rem;
+  padding: 0.5rem;
 }
 
 #player {
-  font-size: 1.6rem;
-  padding: 1em;
+  font-size: 1.4rem;
+  padding: 0.7em;
   text-align: center;
 }
 
@@ -246,12 +246,12 @@ div#winStatement {
   text-transform: uppercase;
   text-decoration: none;
   background: #ff3333;
-  padding: 20px;
+  padding: 16px;
   border-radius: 5px;
   display: block;
   border: none;
-  margin: 30px auto;
-  font-size: 1.3rem;
+  margin: 1em auto;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 900px) {
