@@ -43,8 +43,8 @@ p {
 }
 
 #player {
-  font-size: 1.4rem;
-  padding: 0.7em;
+  font-size: 1.3rem;
+  padding: 0.3em;
   text-align: center;
 }
 
@@ -276,7 +276,7 @@ div#winStatement {
   and (max-height: 600px)
   and (orientation: landscape) {
       html {
-        font-size: 60%;
+        font-size: 57%;
       }
       .container {
         padding: 1em;
