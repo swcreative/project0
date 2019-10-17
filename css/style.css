@@ -256,7 +256,7 @@ div#winStatement {
 
 @media screen and (max-width: 900px) {
   .container {
-    min-width: 95%;
+    width: 95%;
   }
   h1 {
     padding: 1.5rem;
