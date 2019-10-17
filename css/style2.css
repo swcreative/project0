@@ -296,6 +296,7 @@ div#winStatement {
     }
     .container {
       flex-direction: row;
+      padding: 1em;
     }
     .header {
       display: flex;
@@ -310,7 +311,7 @@ div#winStatement {
     div.help > p {
       font-size: 180%;
     }
-    .container {
+    /* .container {
       max-width: 60%;
-    }
+    } */
 }
