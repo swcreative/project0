@@ -273,6 +273,9 @@ div#winStatement {
     .howto.howtobottom {
       font-size: 2rem;
     }
+    .howto {
+      font-size: 2rem;
+    }
     div.help > p {
       font-size: 180%;
     }
