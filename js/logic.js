@@ -37,13 +37,13 @@ const ticTac = {
       7: ["row3", "col2"],
       8: ["row3", "col3", "dia1"]
     },
-    moves: [ "","" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ], // setting an empty array. I need to start the array with a length so that I can check each go if array has any undefined elements. If so, then continue playing.
+    moves: [ "","" ,"" ,"" ,"" ,"" ,"" ,"" ,"" ], // setting an empty array. I need to start the array with a length so that I can check each element of array. If array has any undefined elements, then continue playing.
     noWinnerTest: function() {
       if (ticTac.moves.includes("") === false) {
-          console.log("Nobody won");
           status = "draw";
-        } else {
-            console.log("Keep going");
+
+        // } else {
+        //     console.log("Keep going");
       }
     },
     position: function( turn ) {
@@ -52,15 +52,8 @@ const ticTac = {
         // assign second digit to activePos
         activePos = turn.slice(1,2);
 
-        //testing output
-        console.log( activeLetter);
-        console.log( activePos );
-
         // input the activeLetter into the 'moves' array at position 'activePos'
         this.moves[activePos] = activeLetter;
-
-        // testing output
-        console.log( this.moves );
 
         // test the array against the winning combinations
         this.winningCalc();
@@ -76,9 +69,6 @@ const ticTac = {
         // loop through each relevant test
         for ( let key in tests ) {
 
-            // testing output: showing the test name required eg 'row1' ////
-            console.log( tests[key]);
-
             // create a varaible for each test value, eg 'row1'
             const test = tests[key];
 
@@ -88,19 +78,12 @@ const ticTac = {
             testPos2 = this.winning[test][1];
             testPos3 = this.winning[test][2];
 
-            // testing output /////
-            // console.log( testPos1);
-            // console.log( testPos2);
-            // console.log( testPos3);
-            //
-            // console.log( this.moves[testPos1]);
-            // console.log( this.moves[testPos2]);
-            // console.log( this.moves[testPos3]);
-            //
-            // console.log( activeLetter);
-
             // test if all squares have a value in them. If so, declare no winner and run reset function.
+            console.log(`draw test. current status ${ status }`);
             this.noWinnerTest();
+            console.log( status) ;
+            console.log(`draw test over`);
+
             // do your three position test for winner
             if ( (this.moves[testPos1] === activeLetter) &&
                  (this.moves[testPos2] === activeLetter) &&
@@ -112,9 +95,11 @@ const ticTac = {
 
               if ( winner === "X" ) {
                 counterX += 1;
+                localStorage.setItem( "X", counterX ); ////
               }
               if ( winner === "O" ) {
                 counterO += 1;
+                localStorage.setItem( "O", counterO ); ///
               }
               return;
             } // end of if statement

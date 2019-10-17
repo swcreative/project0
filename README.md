@@ -23,16 +23,20 @@ Click on the 'reset' and you are ready to go again.
  ## TECHNOLOGIES USED
  A combination of HTML, CSS and JavaScript files were used.
 
+ Localstorage is used to keep the scores locally. This is especially important if you go to help screen and then return to the main screen.
+
  For CSS, normalizes and reset css files were used to clean up any browser default formatting.
 
  A jQuery file (jquery-1.7.2.js) is used to access jQuery DOM selectors.
 
- The modal css and javascript files have been kept in separate files to make it easy to include or exclude without risk of damaging other code.
+ The modal javascript and project javascript files have been kept in separate files to keep integrity with the modal file used. It also makes it easy to remove the modal code.
 
  The line in ui.js to include/exclude the modal is lines 37 & 38 to appear and lines 47 to 51 to hide.
 
  The JavaScript confetti code is kindly provided by github account [mathusummut.]( https://github.com/mathusummut/confetti.js)
 Copyright for this is recognised at the top of the confetti.js file.
+
+The square flip CSS animations generated with Animista.net is provided by Animista free for personal and commercial usage and is licensed under FreeBSD license.
 
  ## INSTALLATION INSTRUCTIONS
  To play the game, [click here.](https://swcreative.github.io/project0/)
@@ -42,6 +46,8 @@ Copyright for this is recognised at the top of the confetti.js file.
  ### UNSOLVED PROBLEMS...(or features to consider adding).
  The board does not count the number of draws.
  The board cannot be played online as multi-players.
+ At reset, the squares rotate and clear. The rotation animation currently does not work on iPhone.
+ The localstorage only holds the scores. If you are half way through your game and click on the 'how to play', you keep your scores but lose the current game in progress.
  I think the logic would have worked better if I gave co-ordinates to each square, instead of fixed positions.
 
  ### LOGIC APPLIED

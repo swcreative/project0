@@ -68,10 +68,10 @@ p {
 .howto {
   margin-top: 0.3em;
   font-size: 1.0rem;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   color: #555;
   border-radius: 0.4em;
-  display: block;
+  display: inline-block;
   background-color: #eee;
 }
 
@@ -228,7 +228,7 @@ div#winStatement {
 
 .scorebutton {
   font-size: 2.7rem;
-  padding: 0.1em 0.8em;
+  padding: 0.0em 0.4em;
   margin: 0 0.4em;
   border-radius: 6px;
   color: var(--square-color);
@@ -279,7 +279,6 @@ div#winStatement {
     div.help > p {
       font-size: 180%;
     }
-
     .container {
       max-width: 60%;
     }

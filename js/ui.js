@@ -2,7 +2,22 @@ console.log("JS UI connected");
 
 $(document).ready( function () {
 
+    // welcome message
     $('#player').text(`${ startPlayer} goes first. Good luck.`)
+
+    // if they are continuing their play, load localStorage scores into scores, else start with 0 for each player
+    $('#scoreX').text( localStorage.getItem("X") || 0);
+    $('#scoreO').text( localStorage.getItem("O") || 0);
+
+    // IF YOU CLICK THE CLEAR Button
+    // clear scores from localstorage
+    // updates score boxes
+    $('#clear-button').on('click', function() {
+      localStorage.clear(); // this clears all - which includes X and O scores
+      // update scores on page
+      $('#scoreX').text( 0 );
+      $('#scoreO').text(  0);
+    });
 
     // when someone clicks a square
     $('.square').on('click', function() {
@@ -37,12 +52,15 @@ $(document).ready( function () {
         $('#myModal').css('display', 'block'); // trigger the modal
         $('.modal-content p').text(`${ activeLetter } won this round`);
         confetti.start();
+        $('#player').text(`${ activeLetter } won this round`);
 
         $('#player').css('visibility', 'hidden');
 
         // update the score table
-        $('#scoreX').text(`${ counterX }`);
-        $('#scoreO').text(`${ counterO }`);
+        // $('#scoreX').text(`${ counterX }`); /// old
+        $('#scoreX').text( localStorage.getItem("X") || 0 );
+        // $('#scoreO').text(`${ counterO }`);
+        $('#scoreO').text( localStorage.getItem("O") || 0 ); /// old
       }
       // after WIN, need to clear modal and activate reset
       $('#myModal').on('click', function () {
@@ -54,8 +72,6 @@ $(document).ready( function () {
 
             // stop the confetti
             confetti.stop();
-
-
         })
 
       // DRAW /////////////
@@ -108,6 +124,8 @@ $(document).ready( function () {
         startPlayer = "X";
       }
       activeLetter = startPlayer;
+      $('#player').css('visibility', 'visible');
+
       $('#player').text(`'${ startPlayer }' goes first. Good luck.`)
 
     }) // end of reset
