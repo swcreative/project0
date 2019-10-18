@@ -2,6 +2,7 @@
 # TIC TAC TOE
 
 This is a simple Tic Tac Toe game.
+This was created as an assignment as part of the General Assembly Software Engineering Immersive course (2019).
 
 ## THE WAY THIS WORKS
 The game starts with two players, player X and player O.
@@ -21,9 +22,13 @@ Click on the 'reset' and you are ready to go again.
 The number of wins each player are kept in your browser storage. You must either click 'Clear Scores' or close your browser window to reset the scores.
 
 ## TECHNOLOGIES USED
-A combination of HTML, CSS and JavaScript files were used.
+- html
+- css
+- JavaScript
+- jquery (jquery-1.7.2.js)
+- LocalStorage
 
-Localstorage is used to keep the scores locally. This is especially important if you go to help screen and then return to the main screen.
+Localstorage is used to keep the scores locally. This is especially important if you navigate to help screen and then return to the main screen.
 
 For CSS, normalizes and reset css files were used to clean up any browser default formatting.
 
@@ -40,6 +45,10 @@ The square flip CSS animations generated with Animista.net is provided by Animis
 
 ## INSTALLATION INSTRUCTIONS
 To play the game, [click here.](https://swcreative.github.io/project0/)
+
+Or select the QR code:
+
+![QR Code](QRcode-TicTacToe.png)
 
 Enjoy!
 
