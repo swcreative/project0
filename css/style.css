@@ -43,8 +43,8 @@ p {
 }
 
 #player {
-  font-size: 1.4rem;
-  padding: 0.7em;
+  font-size: 1.3rem;
+  padding: 0.3em;
   text-align: center;
 }
 
@@ -63,6 +63,14 @@ p {
 .container {
   margin: 0 auto;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* New */
+.header {
+  /* display: flex */
 }
 
 .howto {
@@ -116,6 +124,7 @@ p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  padding: 1.5em;
 }
 
 .row1 {
@@ -254,32 +263,21 @@ div#winStatement {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 900px) {
-  .container {
-    width: 95%;
-  }
-  h1 {
-    padding: 1.5rem;
-  }
-}
 
- @media only screen
-  and (min-device-width: 300px)
-  and (max-device-width: 800px)
+
+@media screen
+  and (max-height: 600px)
   and (orientation: landscape) {
-    html {
-      font-size: 40%;
-    }
-    .howto.howtobottom {
-      font-size: 1.5rem;
-    }
-    .howto {
-      font-size: 1.5rem;
-    }
-    div.help > p {
-      font-size: 180%;
-    }
-    .container {
-      max-width: 60%;
-    }
+      html {
+        font-size: 57%;
+      }
+      .container {
+        padding: 1em;
+        flex-direction: row;
+      }
+      .header {
+        display: flex;
+        justify-content: center;
+        font-size: 60%;
+      }
 }
