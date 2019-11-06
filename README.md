@@ -68,9 +68,6 @@ When you take a turn, the logic determines if the letter (either X or O) applied
 ## SCREEN SHOT of GAME
 ![screen shot](https://github.com/swcreative/project0/blob/master/Tic%20Tac%20Screen%20Shot.png) This shows the graphics of the game as at Oct 2019.
 
-## MEDIUM ARTICLE
-If you made it this far, I also wrote a [Medium article](https://medium.com/@scottw2508/what-two-days-at-a-coding-bootcamp-feels-like-a3371441d5eb) on the process.
-
 ## Is It Finished?
 Is anything ever truly finished?
 
